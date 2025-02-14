@@ -30,8 +30,20 @@
 }
 * {
   box-sizing: border-box;
+  background-color: #EFFAF7;
+}
+
+body {
+  display: flex;
+  justify-content: left;
+  align-items: normal;
+  padding-left: 1rem;
+  padding-top: 1.5rem;
 }
 
 .App {
   font-family: "NewsReader";
+}
+.App__title {
+  margin: 0;
 }/*# sourceMappingURL=App.css.map */

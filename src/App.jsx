@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+//import reactLogo from './assets/react.svg'
+//import viteLogo from '/vite.svg'
+import "./App.scss";
+import Footer from './components/footer/footer';
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -35,7 +36,10 @@ import './App.css'
 function App() {
   return (
     <main className='App'>
-      <h1>Snaps</h1>
+      <h1 className='App__title'>Snaps</h1>
+      <div>
+       <Footer />
+    </div>
     </main>
   );
 }
