@@ -1,0 +1,12 @@
+@use "./styles/partials/global";
+@use "./styles/partials/typography";
+@use "./styles/partials/variables" as *;
+
+* {
+    box-sizing: border-box;
+}
+
+.App {
+    font-family: "NewsReader";
+}
+
