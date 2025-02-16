@@ -2,7 +2,8 @@ import { useState } from 'react'
 //import reactLogo from './assets/react.svg'
 //import viteLogo from '/vite.svg'
 import "./App.scss";
-import Footer from './components/footer/footer';
+import PhotoCard from './components/photoCard/photoCard';
+import Footer from './components/Footer/Footer';
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -37,6 +38,9 @@ function App() {
   return (
     <main className='App'>
       <h1 className='App__title'>Snaps</h1>
+      <div>
+        <PhotoCard />
+      </div>
       <div>
        <Footer />
     </div>

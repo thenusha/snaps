@@ -1,3 +1,58 @@
+@font-face {
+  font-family: "NewsReader";
+  src: url(../../assets/fonts/Newsreader-Light.woff) format("woff");
+  font-weight: 300;
+  font-style: lighter;
+}
+@font-face {
+  font-family: "NewsReader";
+  src: url(../../assets/fonts/Newsreader-LightItalic.woff) format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "NewsReader";
+  src: url(../../assets/fonts/Newsreader-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(../../assets/fonts/Outfit-Light.woff) format("woff");
+  font-weight: 300;
+  font-style: lighter;
+}
+@font-face {
+  font-family: "Outfit-Medium";
+  src: url(../../assets/fonts/Outfit-Medium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
 .footer {
   font-family: "Outfit-Medium";
-}/*# sourceMappingURL=Footer.css.map */
+}
+.footer__title {
+  font-family: "NewsReader";
+}
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  padding: 8px 0;
+}
+.footer__section--link {
+  color: #0c1e1a;
+}
+.footer__socials {
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
+}
+.footer__info {
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
+}
+.footer__info--links {
+  color: #B7CEC9;
+}/*# sourceMappingURL=footer.css.map */
