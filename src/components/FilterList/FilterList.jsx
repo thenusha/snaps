@@ -3,15 +3,11 @@ import filters from "../../data/tags.json";
 import "./FilterList.scss";
 
 export default function FilterList ( { selectTag, setselectTag } ) {
-    //console.log(filters);
-    //console.log(setFilterClicked);
     const toggleSelect = (tag) => {
         const newTag = selectTag === tag ? null : tag;
         setselectTag(newTag);
 
       };
-
-    //const [color, setColor] = useState("#000000");
 
     
 
@@ -29,7 +25,3 @@ export default function FilterList ( { selectTag, setselectTag } ) {
         </div>
     );
 }
-
-// onClick={() => {
-//     setFilterClicked(!filterClicked);
-// }}

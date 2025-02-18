@@ -1,5 +1,4 @@
 @use "../../styles/partials/typography";
-//@use "../../styles/partials/variables";
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
@@ -27,12 +26,17 @@
         }
 
         &--img {
-            //margin-right: 16px;
-            //width: 90vw;
             width: 100%;
             height: auto;
             border-top-left-radius: .5rem;
             border-top-right-radius: .5rem;
+        }
+
+        &--photographer {
+            width: 40%;
+            float: right;
+            background-color: #e4efec;
+            font-family: "Outfit-Medium";
         }
 
         &--container {

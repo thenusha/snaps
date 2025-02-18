@@ -10,10 +10,5 @@ export default function FilterButton () {
 
     return (
         <FilterDrawer handleClick={toggle}/>
-        // {isOpened && (
-        //     <div>
-        //     {}
-        //     </div>
-        // )}
     );
 }
