@@ -14,6 +14,7 @@ export default function Footer() {
     return (
         <div className="footer">
             <h1 className="footer__title">Snaps</h1>
+            <div className="footer__parent">
             <div className="footer__section">
                 <a className="footer__section--link">For photographers</a>
                 <a className="footer__section--link" href="">Hire talent</a>
@@ -24,11 +25,12 @@ export default function Footer() {
                 <a className="footer__section--link" href="">Careers</a>
                 <a className="footer__section--link" href=""> Support</a>
             </div>
+            </div>
             <div className="footer__socials">
-                <img src="../../src/assets/images/Facebook.svg" alt="" />
-                <img src="../../src/assets/images/X_twitter.svg" alt="" />  
-                <img src="../../src/assets/images/Instagram.svg" alt="" />
-                <img src="../../src/assets/images/Pinterest.svg" alt="" />
+                <img className="footer__socials--link" src="../../src/assets/images/Facebook.svg" alt="" />
+                <img className="footer__socials--link" src="../../src/assets/images/X_twitter.svg" alt="" />  
+                <img className="footer__socials--link" src="../../src/assets/images/Instagram.svg" alt="" />
+                <img className="footer__socials--link" src="../../src/assets/images/Pinterest.svg" alt="" />
                 
             </div>
             <div className="footer__info">

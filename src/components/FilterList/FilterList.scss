@@ -1,0 +1,32 @@
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+
+.filters {
+    background-color: #e4efec;
+
+    &__title {
+        font-family: "Outfit-Medium";
+        margin: 0;
+        padding: 24px 0px;
+        background-color: #e4efec;
+    }
+
+    &__button {
+        font-family: "Outfit-Medium";
+        padding: 6px 8px;
+        border-radius: 6px;
+        border: 1px solid #49675a;
+        color: #49675a;
+        margin: .25rem;
+
+        &--selected {
+            background-color: #49675a;
+            color: white;
+        }
+    }
+
+    &__button:hover {
+        background-color: $forest-green;
+        color: $white;
+    }
+}

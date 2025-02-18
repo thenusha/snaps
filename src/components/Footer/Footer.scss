@@ -1,5 +1,6 @@
 @use "../../styles/partials/typography";
-@use "../../styles/partials/variables";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 
 .footer {
@@ -7,6 +8,14 @@
 
     &__title {
         font-family: "NewsReader";
+    }
+
+    &__parent {
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
     }
 
     &__section {
@@ -25,6 +34,10 @@
         display: flex;
         flex-direction: row;
         align-items: normal;
+
+        &--link {
+            padding: 0 8px;
+        }
     }
 
     &__info {
@@ -34,6 +47,7 @@
 
         &--links{
             color: #B7CEC9;
+            padding: 0 8px;
         }
     }
 

@@ -4,7 +4,7 @@
 
 * {
     box-sizing: border-box;
-    background-color: #EFFAF7;
+    background-color: $pistachio;
 }
 
 body {
@@ -17,6 +17,12 @@ body {
 
 .App {
     font-family: "NewsReader";
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
     
     &__title{
         margin: 0;

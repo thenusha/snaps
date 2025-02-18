@@ -1,0 +1,35 @@
+import { useState } from "react";
+import filters from "../../data/tags.json";
+import "./FilterList.scss";
+
+export default function FilterList ( { selectTag, setselectTag } ) {
+    //console.log(filters);
+    //console.log(setFilterClicked);
+    const toggleSelect = (tag) => {
+        const newTag = selectTag === tag ? null : tag;
+        setselectTag(newTag);
+
+      };
+
+    //const [color, setColor] = useState("#000000");
+
+    
+
+    return (
+        <div className="filters">
+            <h2 className="filters__title">Filters</h2>
+            {filters.map((tag, index) => (
+                <button key={index} className= {`filters__button ${selectTag === tag ? "filters__button--selected" : ""}`}
+                onClick={ () => 
+                    toggleSelect(tag)}
+                 >
+                    {tag}
+                </button>
+            ))}
+        </div>
+    );
+}
+
+// onClick={() => {
+//     setFilterClicked(!filterClicked);
+// }}

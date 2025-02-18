@@ -1,0 +1,57 @@
+@use "../../styles/partials/typography";
+//@use "../../styles/partials/variables";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.photos {
+    
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    &__card {
+        border: solid 1px $forest-green;
+        border-radius: .5rem;
+        background-color: #e4efec;
+        margin-top: 1rem;
+
+        @include tablet {
+            width: 40%;
+        }
+
+        @include desktop {
+            width: 30%;
+        }
+
+        &--img {
+            //margin-right: 16px;
+            //width: 90vw;
+            width: 100%;
+            height: auto;
+            border-top-left-radius: .5rem;
+            border-top-right-radius: .5rem;
+        }
+
+        &--container {
+            background-color: #e4efec;
+            border-bottom-left-radius: .5rem;
+            border-bottom-right-radius: .5rem;
+        }
+
+
+        &--tags {
+            font-family: "Outfit-Medium";
+            border-radius: .375rem;
+            padding: .375rem .5rem;
+            border: solid .0625rem #b7cec9;
+            margin: .25rem;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            background-color: white;
+        }
+    }
+
+}

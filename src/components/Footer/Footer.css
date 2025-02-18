@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "NewsReader";
+  font-family: "NewsReader-Light";
   src: url(../../assets/fonts/Newsreader-Light.woff) format("woff");
   font-weight: 300;
   font-style: lighter;
 }
 @font-face {
-  font-family: "NewsReader";
+  font-family: "NewsReader-Italic";
   src: url(../../assets/fonts/Newsreader-LightItalic.woff) format("woff");
   font-weight: 300;
   font-style: italic;
@@ -17,7 +17,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Outfit";
+  font-family: "Outfit-Light";
   src: url(../../assets/fonts/Outfit-Light.woff) format("woff");
   font-weight: 300;
   font-style: lighter;
@@ -48,6 +48,9 @@
   flex-direction: row;
   align-items: normal;
 }
+.footer__socials--link {
+  padding: 0 8px;
+}
 .footer__info {
   display: flex;
   flex-direction: row;
@@ -55,4 +58,5 @@
 }
 .footer__info--links {
   color: #B7CEC9;
-}/*# sourceMappingURL=footer.css.map */
+  padding: 0 8px;
+}/*# sourceMappingURL=Footer.css.map */

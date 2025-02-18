@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "NewsReader";
+  font-family: "NewsReader-Light";
   src: url(../../assets/fonts/Newsreader-Light.woff) format("woff");
   font-weight: 300;
   font-style: lighter;
 }
 @font-face {
-  font-family: "NewsReader";
+  font-family: "NewsReader-Italic";
   src: url(../../assets/fonts/Newsreader-LightItalic.woff) format("woff");
   font-weight: 300;
   font-style: italic;
@@ -17,7 +17,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Outfit";
+  font-family: "Outfit-Light";
   src: url(../../assets/fonts/Outfit-Light.woff) format("woff");
   font-weight: 300;
   font-style: lighter;
@@ -43,6 +43,11 @@ body {
 
 .App {
   font-family: "NewsReader";
+}
+.App__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .App__title {
   margin: 0;

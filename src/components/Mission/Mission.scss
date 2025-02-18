@@ -1,0 +1,19 @@
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables";
+
+.mission {
+    &__title {
+        font-family: "Outfit-Light";
+        font-size: 1.125rem;
+        line-height: 1.4375rem;
+    }
+    &__text {
+        line-height: 2.375rem;
+        font-size: 26px;
+        font-family: "NewsReader-Light";
+
+        &--ital {
+            font-family: "NewsReader-Italic";
+        }
+    }
+}

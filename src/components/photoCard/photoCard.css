@@ -1,1 +1,57 @@
-/*# sourceMappingURL=photoCard.css.map */
+@font-face {
+  font-family: "NewsReader-Light";
+  src: url(../../assets/fonts/Newsreader-Light.woff) format("woff");
+  font-weight: 300;
+  font-style: lighter;
+}
+@font-face {
+  font-family: "NewsReader-Italic";
+  src: url(../../assets/fonts/Newsreader-LightItalic.woff) format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "NewsReader";
+  src: url(../../assets/fonts/Newsreader-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Outfit-Light";
+  src: url(../../assets/fonts/Outfit-Light.woff) format("woff");
+  font-weight: 300;
+  font-style: lighter;
+}
+@font-face {
+  font-family: "Outfit-Medium";
+  src: url(../../assets/fonts/Outfit-Medium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+.photos__card {
+  border: solid 1px #1e6655;
+  border-radius: 0.5rem;
+  background-color: #e4efec;
+  margin-top: 1rem;
+}
+.photos__card--img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.photos__card--container {
+  background-color: #e4efec;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.photos__card--tags {
+  font-family: "Outfit-Medium";
+  border-radius: 0.375rem;
+  padding: 0.375rem 0.5rem;
+  border: solid 0.0625rem #b7cec9;
+  margin: 0.25rem;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+}/*# sourceMappingURL=photoCard.css.map */
