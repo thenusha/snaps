@@ -1,6 +1,7 @@
 @use "./styles/partials/global";
 @use "./styles/partials/typography";
 @use "./styles/partials/variables" as *;
+@use "./styles/partials/mixins" as *;
 
 * {
     box-sizing: border-box;
@@ -26,6 +27,13 @@ body {
     
     &__title{
         margin: 0;
+        font-size: 32px;
+        line-height: 32px;
+
+        @include tablet {
+            font-size: 40px;
+            line-height: 40px;
+        }
     }
 }
 

@@ -1,16 +1,29 @@
 @use "../../styles/partials/typography";
-@use "../../styles/partials/variables";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 
 .mission {
     &__title {
         font-family: "Outfit-Light";
         font-size: 1.125rem;
         line-height: 1.4375rem;
+
+        @include tablet {
+            font-size: 1.5rem;
+            line-height: 1.875rem;
+        }
     }
+
     &__text {
         line-height: 2.375rem;
         font-size: 26px;
         font-family: "NewsReader-Light";
+
+        @include tablet {
+            font-size: 52px;
+            line-height: 66px;
+        }
 
         &--ital {
             font-family: "NewsReader-Italic";
