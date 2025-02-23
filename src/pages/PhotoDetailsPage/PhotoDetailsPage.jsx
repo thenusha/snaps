@@ -3,6 +3,7 @@ import axios from "axios";
 import './PhotoDetailsPage.scss';
 import { useState, useEffect } from "react";
 import CommentForm from "../../components/CommentForm/CommentForm";
+import CommentDisplay from "../../components/CommentDisplay/CommentDisplay";
 
 
 
@@ -35,6 +36,9 @@ export default function PhotoDetailsPage() {
         </div>
         <div>
             <CommentForm></CommentForm>
+        </div>
+        <div>
+            <CommentDisplay></CommentDisplay>
         </div>
         </div>
     );
