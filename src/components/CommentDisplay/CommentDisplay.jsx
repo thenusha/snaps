@@ -26,8 +26,9 @@ export default function CommentDisplay() {
             <div>
                {comments.map((comment) => {
                 return (
-                    <div>
+                    <div key={comment.id}>
                         <div>{comment.name}</div>
+                        //<div>{comment.timestamp}</div>
                     <div>
                         {comment.comment}
                     </div>
