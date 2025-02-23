@@ -1,6 +1,4 @@
 import { Link, useParams } from "react-router-dom";
-
-//import photos from "../../data/photos.json";
 import { useState } from "react";
 import FilterList from "../FilterList/FilterList";
 import "./photoCard.scss";

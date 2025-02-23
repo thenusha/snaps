@@ -1,0 +1,56 @@
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.card {
+    border: solid 1px $forest-green;
+    border-radius: .5rem;
+    background-color: #e4efec;
+    margin-top: 1rem;
+
+    &__img {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem; 
+    }
+
+    &__container {
+        background-color: #e4efec;
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        position: relative;
+    }
+
+    &__tags {
+        font-family: "Outfit-Medium";
+        border-radius: .375rem;
+        padding: .375rem .5rem;
+        border: solid .0625rem #b7cec9;
+        margin: .25rem;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        background-color: white;
+    }
+
+    &__info {
+        background-color: $sage;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 1rem;
+        font-family: "Outfit-Medium";
+
+        &--img {
+            background-color: $sage;
+        }
+
+        &--date {
+            background-color: $sage;
+        }
+
+        &--photographer {
+            background-color: $sage;
+        }
+    }
+}

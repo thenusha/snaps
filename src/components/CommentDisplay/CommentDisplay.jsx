@@ -28,7 +28,7 @@ export default function CommentDisplay() {
                 return (
                     <div key={comment.id}>
                         <div>{comment.name}</div>
-                        //<div>{comment.timestamp}</div>
+                        //<div>{new Date(comment.timestamp).toLocaleDateString()}</div>
                     <div>
                         {comment.comment}
                     </div>

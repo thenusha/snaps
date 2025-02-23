@@ -6,6 +6,7 @@ import CommentForm from "../../components/CommentForm/CommentForm";
 import CommentDisplay from "../../components/CommentDisplay/CommentDisplay";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
+import DetailsPageCard from "../../components/DetailsPageCard/DetailsPageCard";
 
 
 
@@ -34,7 +35,7 @@ export default function PhotoDetailsPage() {
         <div>
         <Header></Header>
         <div>
-            <img src={photos.photo} alt="" />
+            <DetailsPageCard photos={photos}></DetailsPageCard>
         </div>
         <div>
             <CommentForm></CommentForm>
