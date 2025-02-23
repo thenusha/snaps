@@ -1,0 +1,22 @@
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.comments {
+    font-family: "Outfit-Medium";
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-top: 2px solid $sea-green;
+
+        &--name {
+            color: $forest-green;
+        }
+
+        &--date {
+            color: $forest-green;
+        }
+    }
+}

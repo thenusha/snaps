@@ -19,19 +19,19 @@ export default function CommentDisplay() {
     }, [id]);
 
     return (
-        <section>
-            <div>
-                Comment #
+        <section className="comments">
+            <div className="comments__count">
+                {comments.length} Comment{comments.length === 1 ? "" : "s"}
             </div>
             <div>
                {comments.map((comment) => {
                 return (
                     <div key={comment.id}>
-                        <div>{comment.name}</div>
-                        //<div>{new Date(comment.timestamp).toLocaleDateString()}</div>
-                    <div>
+                        <div className="comments__info">
+                            <div className="comments__info--name">{comment.name}</div>
+                            <div className="comments__info--date">{new Date(comment.timestamp).toLocaleDateString()}</div>
+                        </div>
                         {comment.comment}
-                    </div>
                     </div>
                 );
                })} 
