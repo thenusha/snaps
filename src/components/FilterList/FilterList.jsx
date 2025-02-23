@@ -1,12 +1,11 @@
 import { useState } from "react";
-import filters from "../../data/tags.json";
+//import filters from "../../data/tags.json";
 import "./FilterList.scss";
 
-export default function FilterList ( { selectTag, setselectTag } ) {
+export default function FilterList ( { filters, selectTag, setselectTag } ) {
     const toggleSelect = (tag) => {
         const newTag = selectTag === tag ? null : tag;
         setselectTag(newTag);
-
       };
 
     

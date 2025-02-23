@@ -5,22 +5,31 @@ import Footer from './components/Footer/Footer';
 import FilterDrawer from './components/FilterDrawer/FilterDrawer';
 import Mission from './components/Mission/Mission';
 import FilterList from './components/FilterList/FilterList';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import filters from "../src/data/tags.json";
+import HomePage from './pages/HomePage/HomePage';
+import PhotoDetailsPage from './pages/PhotoDetailsPage/PhotoDetailsPage';
 
 
 function App() {
 
-const [page, setPage] = useState("noshow");
-const toggleSort = () => {
-  setPage(page === "noshow" ? "show" : "noshow");
-};
+// const [page, setPage] = useState("noshow");
+// const toggleSort = () => {
+//   setPage(page === "noshow" ? "show" : "noshow");
+// };
 
-const [selectTag, setselectTag] = useState(null);
+// const [selectTag, setselectTag] = useState(null);
 
 
   return (
     <main className='App'>
-      <div className='App__header'>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="photo/:id" element={<PhotoDetailsPage />} />
+      </Routes>
+      </BrowserRouter>
+      {/* <div className='App__header'>
         <h1 className='App__title'>Snaps</h1>
         <FilterDrawer handleClick={toggleSort}/>
       </div>
@@ -35,7 +44,7 @@ const [selectTag, setselectTag] = useState(null);
       </div>
       <div>
        <Footer />
-    </div>
+    </div> */}
     </main>
   );
 }

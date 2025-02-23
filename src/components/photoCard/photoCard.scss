@@ -33,16 +33,20 @@
         }
 
         &--photographer {
-            width: 40%;
-            float: right;
+            //width: 40%;
+            //float: right;
+            position: absolute;
             background-color: #e4efec;
             font-family: "Outfit-Medium";
+            right: 0;
+            top: -40px;
         }
 
         &--container {
             background-color: #e4efec;
             border-bottom-left-radius: .5rem;
             border-bottom-right-radius: .5rem;
+            position: relative;
         }
 
 
