@@ -1,0 +1,21 @@
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header {
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title{
+        font-family: "NewsReader";
+        color: $black;
+        font-size: 2rem;
+    }
+
+    &__home{
+        font-family: "Outfit-Medium";
+        color: $forest-green;
+    }
+}

@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import CommentForm from "../../components/CommentForm/CommentForm";
 import CommentDisplay from "../../components/CommentDisplay/CommentDisplay";
 import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
 
 
 
@@ -26,12 +27,12 @@ export default function PhotoDetailsPage() {
       }, [id]);
 
       if (!photos) {
-        return <>Loadinng...</>;
+        return <>Loading...</>;
       }
 
     return (
         <div>
-        <h2>photo deta</h2>
+        <Header></Header>
         <div>
             <img src={photos.photo} alt="" />
         </div>
