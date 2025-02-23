@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import './PhotoDetailsPage.scss';
 import { useState, useEffect } from "react";
+import CommentForm from "../../components/CommentForm/CommentForm";
 
 
 
@@ -31,6 +32,9 @@ export default function PhotoDetailsPage() {
         <h2>photo deta</h2>
         <div>
             <img src={photos.photo} alt="" />
+        </div>
+        <div>
+            <CommentForm></CommentForm>
         </div>
         </div>
     );
