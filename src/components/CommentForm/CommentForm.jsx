@@ -32,11 +32,11 @@ const handleSubmit = async (e) => {
 
 
 return (
-    <form onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="form__name">Name</label>
         <input type="text" id="form__name" name="name" value={commentName} onChange={handleNameChange} />
         <label htmlFor="form__comment">Comment</label>
-        <input type="text" name="comment" id="form__comment" value={comment} onChange={handleCommentChange} />
+        <input className="form__comment" type="text" name="comment" id="form__comment" value={comment} onChange={handleCommentChange} />
         <button>Submit</button>
 
     </form>

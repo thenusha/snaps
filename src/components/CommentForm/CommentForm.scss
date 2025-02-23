@@ -1,0 +1,35 @@
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        font-family: "Outfit-Medium";
+    }
+
+    input {
+       width: 100%;
+       border-radius: .5rem;
+       border: solid .125rem $sea-green;
+       background-color: $white;
+    }
+
+    &__comment{
+        line-height: 4em;
+    } 
+
+    button {
+        margin-top: .625rem;
+        width: 5rem;
+        background-color: $forest-green;
+        font-family: "Outfit-Medium";
+        color: $white;
+        font-size: .75rem;
+        line-height: .9375rem;
+        padding: .25rem 0.5rem;
+
+    }
+}
