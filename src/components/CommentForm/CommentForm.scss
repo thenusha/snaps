@@ -31,6 +31,10 @@
        background-color: $white;
     }
 
+    &__name {
+        line-height: 2em;
+    }
+
     &__comment{
         line-height: 4em;
     } 
