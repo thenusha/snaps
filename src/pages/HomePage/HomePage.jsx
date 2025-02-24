@@ -4,7 +4,9 @@ import FilterDrawer from '../../components/FilterDrawer/FilterDrawer';
 import Mission from '../../components/Mission/Mission';
 import FilterList from '../../components/FilterList/FilterList';
 import { Link } from 'react-router-dom';
-import { use, useEffect, useState } from 'react'
+import { use, useEffect, useState } from 'react';
+import "./Homepage.scss";
+
 import axios from "axios";
 
 export default function HomePage() {
@@ -50,9 +52,9 @@ if (!photos.length) {
 
     return (
         <main>
-            <div className='App__header'>
+            <div className='home__header'>
               <Link to="/">
-              <h1 className='App__title'>Snaps</h1>
+              <h1 className='home__title'>Snaps</h1>
               </Link>
         
         <FilterDrawer handleClick={toggleSort}/>

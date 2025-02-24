@@ -1,0 +1,35 @@
+@use "../../styles/partials/typography";
+@use "../../styles/partials/global";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+
+.home {
+    font-family: "NewsReader";
+
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 1rem 1.5rem;
+
+        @include tablet {
+            padding: 2.5rem 1.5rem 2rem;
+        }
+
+    }
+    
+    &__title{
+        margin: 0;
+        font-size: 32px;
+        line-height: 32px;
+        text-decoration: none;
+        color: $black;
+
+        @include tablet {
+            font-size: 40px;
+            line-height: 40px;
+        }
+    }
+}

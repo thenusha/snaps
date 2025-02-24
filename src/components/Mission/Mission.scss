@@ -4,6 +4,12 @@
 
 
 .mission {
+    padding: 0 1rem 0;
+
+    @include tablet {
+        padding: 0 24px 0;
+    }
+    
     &__title {
         font-family: "Outfit-Light";
         font-size: 1.125rem;

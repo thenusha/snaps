@@ -12,8 +12,6 @@ body {
     display: flex;
     justify-content: left;
     align-items: normal;
-    padding-left: 1rem;
-    padding-top: 1.5rem;
 }
 
 .App {
@@ -29,6 +27,8 @@ body {
         margin: 0;
         font-size: 32px;
         line-height: 32px;
+        text-decoration: none;
+        color: $black;
 
         @include tablet {
             font-size: 40px;

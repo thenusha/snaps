@@ -3,12 +3,14 @@
 @use "../../styles/partials/mixins" as *;
 
 .photos {
+    padding: 1rem;
     
     @include tablet {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        padding: 1.5rem;
     }
 
     &__card {
@@ -33,13 +35,12 @@
         }
 
         &--photographer {
-            //width: 40%;
-            //float: right;
             position: absolute;
             background-color: #e4efec;
             font-family: "Outfit-Medium";
             right: 0;
-            top: -40px;
+            top: -32px;
+            border-top-left-radius: .5rem;
         }
 
         &--container {

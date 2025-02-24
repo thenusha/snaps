@@ -26,7 +26,7 @@ export default function CommentDisplay() {
             <div>
                {comments.map((comment) => {
                 return (
-                    <div key={comment.id}>
+                    <div className="comments__parent" key={comment.id}>
                         <div className="comments__info">
                             <div className="comments__info--name">{comment.name}</div>
                             <div className="comments__info--date">{new Date(comment.timestamp).toLocaleDateString()}</div>

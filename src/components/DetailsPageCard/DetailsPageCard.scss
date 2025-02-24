@@ -6,7 +6,15 @@
     border: solid 1px $forest-green;
     border-radius: .5rem;
     background-color: #e4efec;
-    margin-top: 1rem;
+    margin: 0 16px 16px ; 
+
+    @include tablet {
+        margin: 0 24px 24px;
+    }
+
+    @include desktop {
+        margin: 0 80px 80px;
+    }
 
     &__img {
         width: 100%;
@@ -38,11 +46,26 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        flex-direction: column;
         padding: 1rem;
         font-family: "Outfit-Medium";
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+
+        &--wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: $sage;
+        }
 
         &--img {
             background-color: $sage;
+        }
+
+        &--like{
+           padding-right: .5rem; 
+           background-color: $sage;
         }
 
         &--date {

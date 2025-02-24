@@ -9,10 +9,12 @@ export default function DetailsPageCard({ photos }) {
                     <button className="card__tags">{tag}</button>
                     ))}
                     <div className="card__info">
-                        <div className="card__info--img">
-                            <img src="../../src/assets/images/Like_Outline.svg" alt="" />
-                            {photos.likes} Likes</div>
-                        <div className="card__info--date">{new Date(photos.timestamp).toLocaleDateString()}</div>
+                        <div className="card__info--wrapper">
+                            <div className="card__info--img">
+                                <img className="card__info--like" src="../../src/assets/images/Like_Outline.svg" alt="" />
+                                {photos.likes} Likes</div>
+                            <div className="card__info--date">{new Date(photos.timestamp).toLocaleDateString()}</div>
+                        </div>
                         <div className="card__info--photographer">Photo by {photos.photographer}</div>
                     </div>
             </div>

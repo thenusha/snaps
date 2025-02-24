@@ -5,10 +5,24 @@
 .form {
     display: flex;
     flex-direction: column;
+    padding: 16px;
+
+    @include tablet{
+        padding: 1.5rem;
+    }
+
+    @include desktop {
+        padding: 0 5rem 2.5rem;
+    }
 
     label {
         font-family: "Outfit-Medium";
-    }
+        
+        @include tablet {
+            font-size: 1.25rem;
+            line-height: 26px;
+        }
+    }       
 
     input {
        width: 100%;
@@ -30,6 +44,12 @@
         font-size: .75rem;
         line-height: .9375rem;
         padding: .25rem 0.5rem;
+        align-self: flex-end;
+
+        @include tablet {
+            font-size: 1.25rem;
+            line-height: 1.625rem;
+        }
 
     }
 }

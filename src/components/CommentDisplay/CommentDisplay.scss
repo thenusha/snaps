@@ -5,18 +5,60 @@
 .comments {
     font-family: "Outfit-Medium";
 
+    @include tablet {
+        font-size: 20px;
+    }
+
+    &__count {
+        padding: 1rem;
+
+        @include tablet {
+            padding: 1.5rem;
+        }
+
+        @include desktop {
+            padding-left: 5rem;
+        }
+    }
+
+    &__parent {
+        padding: 0 1rem 0.5rem;
+
+        @include tablet {
+            padding: 0 1.5rem 1rem;
+        }
+
+        @include desktop{
+            padding: 0 80px 2rem;
+        }
+    }
+
     &__info {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         border-top: 2px solid $sea-green;
 
+        @include tablet{
+        padding-top: 1rem;
+        }
+
         &--name {
             color: $forest-green;
+
+            @include tablet {
+                font-size: .75rem;
+                line-height: .9375rem;
+            }
         }
 
         &--date {
             color: $forest-green;
+
+            @include tablet {
+                font-size: .75rem;
+                line-height: .9375rem;
+            }
         }
     }
 }

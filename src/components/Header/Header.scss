@@ -4,18 +4,33 @@
 
 .header {
     display: flex;
-    padding: 2rem;
+    padding: 2rem 1rem 1.5rem;
     align-items: center;
     justify-content: space-between;
+
+    @include tablet {
+        padding: 24px 24px 2.5rem;
+    }
 
     &__title{
         font-family: "NewsReader";
         color: $black;
         font-size: 2rem;
+
+        @include tablet {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+        }
     }
 
     &__home{
         font-family: "Outfit-Medium";
         color: $forest-green;
+        font-size: 1.125rem;
+
+        @include tablet {
+            font-size: 24px;
+            line-height: 30px;
+        }
     }
 }

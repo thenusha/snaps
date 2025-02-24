@@ -1,6 +1,4 @@
 import { Link, useParams } from "react-router-dom";
-import { useState } from "react";
-import FilterList from "../FilterList/FilterList";
 import "./photoCard.scss";
 
 export default function PhotoCard({ photos, selectTag }) {
@@ -11,7 +9,7 @@ export default function PhotoCard({ photos, selectTag }) {
         <div className="photos">
             {photoFiltered.map((photo) => (
                 <div key={photo.id} className="photos__card">
-                    <Link to={`photo/${photo.id}`}> <img className="photos__card--img" src={photo.photo} /> </Link>
+                    <Link to={`photo/${photo.id}`}><img className="photos__card--img" src={photo.photo} /></Link>
                     <div className="photos__card--container">
                         <div className="photos__card--photographer">
                             {photo.photographer}
