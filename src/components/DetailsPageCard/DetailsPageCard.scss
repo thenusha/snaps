@@ -3,17 +3,17 @@
 @use "../../styles/partials/mixins" as *;
 
 .card {
-    border: solid 1px $forest-green;
+    border: solid .0625rem $forest-green;
     border-radius: .5rem;
     background-color: #e4efec;
-    margin: 0 16px 16px ; 
+    margin: 0 1rem 1rem; 
 
     @include tablet {
-        margin: 0 24px 24px;
+        margin: 0 1.5rem 1.5rem;
     }
 
     @include desktop {
-        margin: 0 80px 80px;
+        margin: 0 5rem 5rem;
     }
 
     &__img {
@@ -36,8 +36,8 @@
         padding: .375rem .5rem;
         border: solid .0625rem #b7cec9;
         margin: .25rem;
-        margin-top: 8px;
-        margin-bottom: 8px;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
         background-color: white;
     }
 

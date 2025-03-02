@@ -5,8 +5,8 @@ export default function DetailsPageCard({ photos }) {
         <div className="card">
             <img className="card__img" src={photos.photo} alt="" />
             <div className="card__container">
-                {photos.tags.map((tag) => (
-                    <button className="card__tags">{tag}</button>
+                {photos.tags.map((tag, index) => (
+                    <button className="card__tags" key={index}>{tag}</button>
                     ))}
                     <div className="card__info">
                         <div className="card__info--wrapper">

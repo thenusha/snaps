@@ -1,4 +1,4 @@
-import PhotoCard from '../../components/photoCard/photoCard';
+import PhotoCard from '../../components/PhotoCard/PhotoCard';
 import Footer from '../../components/Footer/Footer';
 import FilterDrawer from '../../components/FilterDrawer/FilterDrawer';
 import Mission from '../../components/Mission/Mission';
@@ -21,15 +21,11 @@ const [photos, setPhotos] = useState([]);
 
 const [filters, setFilters] = useState([]);
 
-const url = "https://unit-3-project-c5faaab51857.herokuapp.com/photos/?api_key=d940a9b4-7fcd-488f-93f0-8014b99d31e0"
-//{"api_key":"d940a9b4-7fcd-488f-93f0-8014b99d31e0"}
-const urlFilter = "https://unit-3-project-c5faaab51857.herokuapp.com/tags?api_key=d940a9b4-7fcd-488f-93f0-8014b99d31e0"
+const baseUrl = import.meta.env.VITE_API_URL;
 
 useEffect(() => {
   const fetchPhoto = async () => {
-    const response = await axios.get(url);
-    console.log(response.data);
-
+    const response = await axios.get(`${baseUrl}/photos`);
     setPhotos(response.data);
   };
     fetchPhoto();
@@ -38,9 +34,7 @@ useEffect(() => {
 
 useEffect(() => {
   const fetchFilter = async () => {
-    const filterResponse = await axios.get(urlFilter);
-    //console.log(filterResponse.data);
-
+    const filterResponse = await axios.get(`${baseUrl}/tags`);
     setFilters(filterResponse.data);
   };
     fetchFilter();
@@ -52,25 +46,20 @@ if (!photos.length) {
 
     return (
         <main>
-            <div className='home__header'>
-              <Link to="/">
+          <div className='home__header'>
+            <Link to="/">
               <h1 className='home__title'>Snaps</h1>
-              </Link>
-        
-        <FilterDrawer handleClick={toggleSort}/>
-      </div>
+            </Link>  
+            <FilterDrawer handleClick={toggleSort}/>
+          </div>
       <div>
         {page === "show" &&
         <FilterList filters={filters} selectTag={selectTag} setselectTag={setselectTag}/>
         } 
       </div>
       <Mission />
-      <div>
-        <PhotoCard photos={photos} selectTag={selectTag} />
-      </div>
-      <div>
+      <PhotoCard key={photos.id} photos={photos} selectTag={selectTag} />
        <Footer />
-    </div>
         </main>
     );
 }

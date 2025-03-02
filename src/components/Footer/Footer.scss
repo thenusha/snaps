@@ -15,6 +15,8 @@
         font-family: "NewsReader";
         font-size: 2rem;
         line-height: 2rem;
+        text-decoration: none;
+        color: $black;
 
         @include tablet {
             font-size: 2.5rem;
@@ -35,7 +37,7 @@
         display: flex;
         flex-direction: column;
         align-items: normal;
-        padding: 8px 0;
+        padding: .5rem 0;
         
 
         &--link {
@@ -49,7 +51,7 @@
         align-items: normal;
 
         &--link {
-            padding: 0 8px;
+            padding: 0 .5rem;
         }
     }
 
@@ -60,7 +62,7 @@
 
         &--links{
             color: #B7CEC9;
-            padding: 0 8px;
+            padding: 0 .5rem;
         }
     }
 

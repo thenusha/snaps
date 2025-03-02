@@ -7,16 +7,17 @@ export default function CommentDisplay() {
 
     const { id } = useParams();
     const [comments, setComments] = useState([]);
+    const baseUrl = import.meta.env.VITE_API_URL;
 
     useEffect(() => {
         const getComments = async () => {
-            const urlComments = `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=d940a9b4-7fcd-488f-93f0-8014b99d31e0`;
-
-            const commentResponse = await axios.get(urlComments);
+            const commentResponse = await axios.get(`${baseUrl}/photos/${id}/comments`);
             setComments(commentResponse.data);
         };
         getComments();
     }, [id]);
+
+    //addd try and catch here
 
     return (
         <section className="comments">
@@ -24,7 +25,7 @@ export default function CommentDisplay() {
                 {comments.length} Comment{comments.length === 1 ? "" : "s"}
             </div>
             <div>
-               {comments.map((comment) => {
+               {comments.map((comment, key) => {
                 return (
                     <div className="comments__parent" key={comment.id}>
                         <div className="comments__info">

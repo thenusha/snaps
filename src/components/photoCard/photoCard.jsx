@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import "./photoCard.scss";
+import "./PhotoCard.scss";
 
 export default function PhotoCard({ photos, selectTag }) {
 
@@ -15,7 +15,7 @@ export default function PhotoCard({ photos, selectTag }) {
                             {photo.photographer}
                         </div>
                         {photo.tags.map((tag) => (
-                            <button className="photos__card--tags">{tag}</button>
+                            <button key={tag} className="photos__card--tags">{tag}</button>
                         ))}   
                     </div>
                 </div>

@@ -14,7 +14,7 @@
     }
 
     &__card {
-        border: solid 1px $forest-green;
+        border: solid .0625rem $forest-green;
         border-radius: .5rem;
         background-color: #e4efec;
         margin-top: 1rem;
@@ -39,7 +39,7 @@
             background-color: #e4efec;
             font-family: "Outfit-Medium";
             right: 0;
-            top: -32px;
+            top: -2rem;
             border-top-left-radius: .5rem;
         }
 
@@ -57,8 +57,8 @@
             padding: .375rem .5rem;
             border: solid .0625rem #b7cec9;
             margin: .25rem;
-            margin-top: 8px;
-            margin-bottom: 8px;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
             background-color: white;
         }
     }

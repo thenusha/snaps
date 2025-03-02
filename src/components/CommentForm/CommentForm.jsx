@@ -8,6 +8,8 @@ const [commentName, setCommentName] = useState("");
 const [comment, setComment] = useState("");
 const [comments, setComments] = useState([]);
 const { id } = useParams();
+const baseUrl = import.meta.env.VITE_API_URL;
+
 
 const handleNameChange = (e) => {
     setCommentName(e.target.value);
@@ -20,21 +22,43 @@ const handleCommentChange = (e) => {
 const handleSubmit = async (e) => {
     e.preventDefault()
 
-    if (commentName.length < 1 && comment.length < 1) {
+    if (commentName === "" || comment === "") {
         console.log("cannot submit, please enter valid input");
+        return;
     }
 
-    const postUrl = ` https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=d940a9b4-7fcd-488f-93f0-8014b99d31e0`
-
-    const response = await axios.post(postUrl,
+    try {
+    const response = await axios.post(`${baseUrl}/photos/${id}/comments`,
         { name: commentName, comment: comment },
         { "Content-Type": "application/json" }
     );
+    console.log("new comment added", response.data);
+    const newComment = {
+        id: response.data.id,
+        name: response.data.name,
+        comment: response.data.comment,
+        timestamp: response.data.timestamp
+    }
+
     setCommentName("");
     setComment("");
-    setComments([response.data, ...comments]);
+    setComments((prevComments) => {
+        const updatedComments = [newComment, ...prevComments];
+        console.log("all the  Comments after update:", updatedComments);
+        return updatedComments;
+    });
+
+
+    console.log(response.data);
+    }
+    catch (error){
+    console.error("error submitting comment");
+    }
 }
 
+useEffect(() => {
+    console.log("Updated Comments:", comments);
+}, [comments]); 
 
 return (
     <form className="form" onSubmit={handleSubmit}>

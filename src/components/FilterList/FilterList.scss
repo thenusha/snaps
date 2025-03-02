@@ -7,15 +7,15 @@
     &__title {
         font-family: "Outfit-Medium";
         margin: 0;
-        padding: 24px 0px;
+        padding: 1.5rem 0rem;
         background-color: #e4efec;
     }
 
     &__button {
         font-family: "Outfit-Medium";
-        padding: 6px 8px;
-        border-radius: 6px;
-        border: 1px solid #49675a;
+        padding: .375rem .5rem;
+        border-radius: .375rem;
+        border: .0625rem solid #49675a;
         color: #49675a;
         margin: .25rem;
 
@@ -28,5 +28,11 @@
     &__button:hover {
         background-color: $forest-green;
         color: $white;
+    }
+
+    &__button:active {
+        color: $white;
+        background-color: $forest-green;
+        border: 1px solid $black;
     }
 }

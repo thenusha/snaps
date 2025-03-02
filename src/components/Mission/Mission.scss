@@ -7,7 +7,7 @@
     padding: 0 1rem 0;
 
     @include tablet {
-        padding: 0 24px 0;
+        padding: 0 1.5rem 0;
     }
     
     &__title {
@@ -23,12 +23,12 @@
 
     &__text {
         line-height: 2.375rem;
-        font-size: 26px;
+        font-size: 1.625rem;
         font-family: "NewsReader-Light";
 
         @include tablet {
-            font-size: 52px;
-            line-height: 66px;
+            font-size: 3.25rem;
+            line-height: 4.125rem;
         }
 
         &--ital {

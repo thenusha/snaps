@@ -1,5 +1,4 @@
 @use "../../styles/partials/typography";
-@use "../../styles/partials/global";
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
@@ -22,14 +21,14 @@
     
     &__title{
         margin: 0;
-        font-size: 32px;
-        line-height: 32px;
+        font-size: 2rem;
+        line-height: 2rem;
         text-decoration: none;
         color: $black;
 
         @include tablet {
-            font-size: 40px;
-            line-height: 40px;
+            font-size: 2.5rem;
+            line-height: 2.5rem;
         }
     }
 }

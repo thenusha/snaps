@@ -1,10 +1,10 @@
 import "./Footer.scss";
-
+import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
         <div className="footer">
-            <h1 className="footer__title">Snaps</h1>
+            <Link to="/"><h1 className="footer__title">Snaps</h1></Link>
             <div className="footer__parent">
             <div className="footer__section">
                 <a className="footer__section--link">For photographers</a>

@@ -14,12 +14,11 @@ import DetailsPageCard from "../../components/DetailsPageCard/DetailsPageCard";
 export default function PhotoDetailsPage() {
     const { id } = useParams();
     const [photos, setPhotos] = useState(null);
+    const baseUrl = import.meta.env.VITE_API_URL;
 
     useEffect(() => {
         const fetchPhoto = async () => {
-            const url = `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}?api_key=d940a9b4-7fcd-488f-93f0-8014b99d31e0`
-            const response = await axios.get(url);
-            console.log(response.data);
+            const response = await axios.get(`${baseUrl}/photos/${id}`);
       
           setPhotos(response.data);
         };
@@ -30,22 +29,15 @@ export default function PhotoDetailsPage() {
       if (!photos) {
         return <>Loading...</>;
       }
-
+      //remove div tags for each component
+      
     return (
-        <div>
-        <Header></Header>
-        <div>
-            <DetailsPageCard photos={photos}></DetailsPageCard>
-        </div>
-        <div>
-            <CommentForm></CommentForm>
-        </div>
-        <div>
-            <CommentDisplay></CommentDisplay>
-        </div>
-        <div>
-            <Footer></Footer>
-        </div>
-        </div>
+        <section>
+        <Header />
+        <DetailsPageCard photos={photos}></DetailsPageCard>
+        <CommentForm />
+        <CommentDisplay />
+        <Footer />
+        </section>
     );
 }
