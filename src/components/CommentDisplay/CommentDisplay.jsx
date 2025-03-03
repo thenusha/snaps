@@ -11,13 +11,19 @@ export default function CommentDisplay() {
 
     useEffect(() => {
         const getComments = async () => {
+
+            try {
             const commentResponse = await axios.get(`${baseUrl}/photos/${id}/comments`);
-            setComments(commentResponse.data);
+            setComments(commentResponse.data.sort((a, b) => { return b.timestamp - a.timestamp }));
+            }
+            catch(error){
+                console.error("error getting comments");
+            }
         };
         getComments();
     }, [id]);
 
-    //addd try and catch here
+    
 
     return (
         <section className="comments">

@@ -29,11 +29,18 @@
        border-radius: .5rem;
        border: solid .125rem $sea-green;
        background-color: $white;
+
+       &:active, &:focus {
+        border: solid .125rem $forest-green;
+        outline: none;
     }
+    }
+
 
     &__name {
         line-height: 2em;
     }
+
 
     &__comment{
         line-height: 4em;
